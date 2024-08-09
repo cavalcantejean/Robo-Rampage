@@ -1,0 +1,29 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://dwxutl7jt6uud"]
+
+[sub_resource type="VisualShaderNodeFresnel" id="VisualShaderNodeFresnel_ymh0x"]
+default_input_values = [2, false, 3, 2.0]
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+
+void fragment() {
+// Fresnel:2
+	float n_in2p3 = 2.00000;
+	float n_out2p0 = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), n_in2p3);
+
+
+// Output:0
+	ALPHA = n_out2p0;
+
+
+}
+"
+graph_offset = Vector2(-74.2415, -38.3521)
+nodes/fragment/0/position = Vector2(940, 100)
+nodes/fragment/2/node = SubResource("VisualShaderNodeFresnel_ymh0x")
+nodes/fragment/2/position = Vector2(260, 320)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 1)
