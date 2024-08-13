@@ -291,11 +291,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4996, -0.601808, 8.42404)
 [node name="MeshInstance3D" parent="LavaPools/Lava2" index="0"]
 mesh = SubResource("PlaneMesh_rlj8n")
 
+[node name="OmniLight3D" parent="LavaPools/Lava2" index="1"]
+omni_range = 15.0
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LavaPools/Lava2"]
 shape = SubResource("ConvexPolygonShape3D_0j5ml")
-
-[node name="OmniLight3D" parent="LavaPools/Lava2" index="2"]
-omni_range = 15.0
 
 [node name="Lava3" parent="LavaPools" instance=ExtResource("7_fcedx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4302, -0.755786, -5.31251)
@@ -304,12 +304,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4302, -0.755786, -5.31251
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3371, 0, 0)
 mesh = SubResource("PlaneMesh_5uvnq")
 
+[node name="OmniLight3D" parent="LavaPools/Lava3" index="1"]
+omni_range = 15.0
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LavaPools/Lava3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3371, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_340b7")
-
-[node name="OmniLight3D" parent="LavaPools/Lava3" index="2"]
-omni_range = 15.0
 
 [node name="Lava" parent="LavaPools" instance=ExtResource("7_fcedx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.374452, -9.46734)
